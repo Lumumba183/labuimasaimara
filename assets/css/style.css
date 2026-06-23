@@ -270,29 +270,26 @@ img {
   overflow: hidden;
 }
 
-.hero-video-container {
+.hero-video-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-video-bg video {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100vw;
-  height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
   transform: translate(-50%, -50%);
-  min-width: 177.78vh;
-  min-height: 56.25vw;
-}
-
-.hero-video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   object-fit: cover;
-  pointer-events: none;
 }
 
-.hero-video-bg img,
-.hero-video-bg video {
+.hero-video-bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
