@@ -88,7 +88,11 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-video-bg">
-      <img src="assets/images/hero-bg.jpg" alt="Maasai Mara savanna golden sunrise with acacia trees">
+      <video autoplay muted loop playsinline preload="auto" poster="assets/images/hero-bg.jpg" id="heroVideo">
+        <source src="assets/images/hero-video.mp4" type="video/mp4">
+        <!-- Fallback to static image if video not supported -->
+        <img src="assets/images/hero-bg.jpg" alt="Maasai Mara savanna golden sunrise with acacia trees">
+      </video>
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">

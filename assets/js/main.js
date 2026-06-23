@@ -13,6 +13,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 1800);
   }
 
+  /* ---- Hero Video Autoplay Fallback ---- */
+  const heroVideo = document.getElementById('heroVideo');
+  if (heroVideo) {
+    heroVideo.play().catch(function() {
+      // Autoplay blocked by browser - poster image displays as fallback
+      console.log('Hero video autoplay blocked - showing poster image');
+    });
+  }
+
   /* ---- Navbar Scroll Effect ---- */
   const navbar = document.querySelector('.navbar');
   if (navbar) {
