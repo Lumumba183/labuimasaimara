@@ -1,5 +1,6 @@
 [build]
-  publish = "."
+  command = "mkdir -p dist && cp *.html dist/ && cp -r assets/ dist/ && cp -r robots.txt dist/ 2>/dev/null; cp -r sitemap.xml dist/ 2>/dev/null; true"
+  publish = "dist"
 
 # SPA redirect — ensures all routes work on Netlify for single-page feel
 [[redirects]]

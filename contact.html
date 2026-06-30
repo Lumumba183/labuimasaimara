@@ -149,7 +149,7 @@
         <div>
           <div class="contact-form fade-in">
             <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--primary-dark); margin-bottom: 0.5rem;">Send Us a Message</h3>
-            <p style="color: var(--text-light); margin-bottom: 1.5rem; font-size: 0.95rem;">Fill out the form below and we'll get back to you promptly. Or skip the form and message us directly on WhatsApp!</p>
+            <p style="color: var(--text-light); margin-bottom: 1.5rem; font-size: 0.95rem;">Fill out the form below and we'll get back to you via email. Or message us directly on WhatsApp for instant replies!</p>
             
             <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
               <p class="hidden" style="display:none">
@@ -200,8 +200,8 @@
                 <textarea id="message" name="message" class="form-input" placeholder="Tell us about your dream safari, special requests, questions..."></textarea>
               </div>
               
-              <button type="submit" class="btn btn-whatsapp" style="width: 100%; justify-content: center; padding: 1rem;">
-                <i class="fab fa-whatsapp"></i> Send via WhatsApp
+              <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 1rem;">
+                <i class="fas fa-paper-plane"></i> Send Message
               </button>
             </form>
           </div>
@@ -331,29 +331,6 @@
   <!-- Scroll Top -->
   <button class="scroll-top" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
 
-  <script>
-    function sendToWhatsApp() {
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const phone = document.getElementById('phone').value;
-      const service = document.getElementById('service').value;
-      const dates = document.getElementById('dates').value;
-      const guests = document.getElementById('guests').value;
-      const message = document.getElementById('message').value;
-      
-      let text = "Hello Labui Safaris!%0A%0A";
-      text += "I'd like to inquire about a safari booking.%0A%0A";
-      text += "*Name:* " + encodeURIComponent(name) + "%0A";
-      text += "*Email:* " + encodeURIComponent(email) + "%0A";
-      if (phone) text += "*Phone:* " + encodeURIComponent(phone) + "%0A";
-      if (service) text += "*Interested in:* " + encodeURIComponent(service) + "%0A";
-      if (dates) text += "*Travel Dates:* " + encodeURIComponent(dates) + "%0A";
-      if (guests) text += "*Guests:* " + encodeURIComponent(guests) + "%0A";
-      if (message) text += "*Message:* " + encodeURIComponent(message) + "%0A";
-      
-      window.open("https://wa.me/254701125189?text=" + text, "_blank");
-    }
-  </script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
